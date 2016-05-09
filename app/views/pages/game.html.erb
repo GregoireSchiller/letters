@@ -1,0 +1,16 @@
+<h1>******** Welcome to the longest word-game !********</h1>
+<h2>Here is your grid :</h2>
+
+<h2> <%= @block %> </h2>
+
+<h2>*****************************************************</h2>
+
+<form action="/score">
+  <label for="question">What is your best shot?</label>
+  <input type="text" id="question" name="answer" placeholder="input your best shot">
+  <input type="hidden" name='block' value = <%= @block.join('') %> >
+  <input type="hidden" name='start_time' value = <%= @start_time%> >
+  <input type="submit" value="Submit!">
+</form>
+
+
